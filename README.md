@@ -70,6 +70,7 @@ Most resources support these methods:
 | TicketState | `client.ticket_state` |
 | TagList | `client.taglist` |
 | TicketTag | `client.ticket_tag` |
+| TimeAccounting | `client.time_accounting` |
 | KnowledgeBases | `client.knowledge_bases` |
 | KnowledgeBasesAnswers | `client.knowledge_bases_answers` |
 | KnowledgeBasesCategories | `client.knowledge_bases_categories` |
@@ -82,6 +83,7 @@ Most resources support these methods:
 ### Ticket
 - `.articles(id)`: Returns all articles associated with a ticket.
 - `.tags(id)`: Returns all tags associated with a ticket.
+- `.time_accountings(id)`: Returns all time accounting entries for a ticket.
 - `.merge(id, number)`: Merges two tickets (requires password auth).
 
 ### Link
@@ -100,6 +102,10 @@ Most resources support these methods:
 ### TicketTag
 - `.add(id, tag)`: Adds a tag to a ticket.
 - `.remove(id, tag)`: Removes a tag from a ticket.
+
+### TimeAccounting
+- `.log_by_activity(year, month)`: Returns monthly time accounting grouped by activity as JSON.
+- `.log_by_activity_download(year, month)`: Returns monthly time accounting grouped by activity as a downloadable file (bytes).
 
 ### KnowledgeBases
 - `.init()`: Returns the entire knowledge base structure.
