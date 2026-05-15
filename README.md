@@ -104,6 +104,7 @@ Most resources support these methods:
 - `.remove(id, tag)`: Removes a tag from a ticket.
 
 ### TimeAccounting
+- Note: standard CRUD/search methods such as `.all()`, `.find()`, and `.search()` are intentionally unsupported for this resource and raise `UnusedResourceError`.
 - `.log_by_activity(year, month)`: Returns monthly time accounting grouped by activity as JSON.
 - `.log_by_activity_download(year, month)`: Returns monthly time accounting grouped by activity as a downloadable file (bytes).
 
